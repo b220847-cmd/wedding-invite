@@ -262,7 +262,11 @@ const EV=[["Lagan & Chaak","29 Nov 2026","Sunday","7:15 AM","Niwas Sthan",[2026,
 ["Mayra","3 Dec 2026","Thursday","1:00 PM",JV,[2026,12,3,13,0]],
 ["Sangeet","3 Dec 2026","Thursday","5:00 PM",JV,[2026,12,3,17,0]],
 ["Wedding","4 Dec 2026","Friday","1:00 PM",JV,[2026,12,4,13,0]]];
-const PH=[["photo1.jpg","50% 38%","Madhulika and Abhishek"],["photo2.jpg","50% 30%","Madhulika and Abhishek"],["photo3.jpg","50% 35%","Madhulika and Abhishek"]];
+const PH=[
+  ["images/photo1.jpg","50% 38%","Madhulika and Abhishek"],
+  ["images/photo2.jpg","50% 30%","Madhulika and Abhishek"],
+  ["images/photo3.jpg","50% 35%","Madhulika and Abhishek"]
+];
 /* ----- TIMELINE ----- */
 $("#tl").innerHTML=EV.map((e,i)=>`<article class="ev rv" style="--d:${i*.06}s"><span class="n">${i+1}</span><h3>${e[0]}</h3><p>${e[1]} · ${e[2]}<br>${e[3]} · ${e[4]}</p>${e[4]===JV?`<a href="${MAP}" target="_blank" rel="noopener">Directions</a>`:""}</article>`).join("");
 /* ----- ALBUM + LIGHTBOX ----- */
