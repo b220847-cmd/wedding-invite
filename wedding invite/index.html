@@ -261,7 +261,7 @@ const EV=[["Lagan & Chaak","29 Nov 2026","Sunday","7:15 AM","Niwas Sthan",[2026,
 ["Haldi","3 Dec 2026","Thursday","10:00 AM",JV,[2026,12,3,10,0]],
 ["Mayra","3 Dec 2026","Thursday","1:00 PM",JV,[2026,12,3,13,0]],
 ["Sangeet","3 Dec 2026","Thursday","5:00 PM",JV,[2026,12,3,17,0]],
-["Wedding","4 Dec 2026","Friday","7:00 PM",JV,[2026,12,4,13,0]]];
+["Wedding","4 Dec 2026","Friday","7:00 PM",JV,[2026,12,4,19,0]]
 const PH=[
   ["images/photo1.jpg","50% 38%","Madhulika and Abhishek"],
   ["images/photo2.jpg","50% 30%","Madhulika and Abhishek"],
@@ -279,7 +279,7 @@ addEventListener("keydown",e=>{if(!lb.classList.contains("on"))return;if(e.key==
 let tx=0;lb.addEventListener("touchstart",e=>tx=e.touches[0].clientX,{passive:true});
 lb.addEventListener("touchend",e=>{const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)show(cur+(d<0?1:-1))},{passive:true});
 /* ----- COUNTDOWN (fixed +05:30) ----- */
-const T=new Date("2026-12-04T13:00:00+05:30").getTime();
+const T = new Date("2026-12-04T19:00:00+05:30").getTime();
 function tick(){let ms=T-Date.now();if(ms<=0){$("#cd").hidden=true;$("#jm").hidden=false;return}
  const s=Math.floor(ms/1e3);$("#d").textContent=Math.floor(s/86400);$("#h").textContent=Math.floor(s%86400/3600);$("#m").textContent=Math.floor(s%3600/60);$("#s").textContent=s%60}
 tick();setInterval(tick,1000);
